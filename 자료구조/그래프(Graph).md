@@ -7,7 +7,7 @@
 ### 그래프 구현 방법
 JavaScript에서 그래프는 일반적으로 *인접 리스트(Adjacency List)* 또는 *인접 행렬(Adjacency Matrix)*로 구현된다.
 
-1. 인접 리스트 (Adjacency List)
+**1. 인접 리스트 (Adjacency List)**
  각 정점에 연결된 다른 정점들을 리스트로 저장하는 방식이다. 이 방식은 메모리 효율적이며, 주로 정점 수가 많고 간선이 적은 경우에 유리하다.
 ```js
 class Graph {
@@ -56,7 +56,7 @@ graph.addEdge("B", "C");
 graph.printGraph();
 ```
 
-2. 인접 행렬 (Adjacency Matrix)
+**2. 인접 행렬 (Adjacency Matrix)**
  정점 간의 관계를 2D 배열로 표현하는 방식이다. 각 행과 열은 정점에 해당하며, 배열의 각 요소는 해당하는 두 정점 간에 간선이 있는지 여부를 나타낸다. 이 방식은 메모리 사용이 많지만, 간선의 존재 여부를 빠르게 확인할 수 있다.
 
 ```js
@@ -89,7 +89,7 @@ graphMatrix.printMatrix();
 ```
 
 ### 그래프 탐색
-1. 깊이 우선 탐색 (DFS)
+**1. 깊이 우선 탐색 (DFS)**
 : 가능한 한 깊이 들어가면서 탐색을 진행하고, 더 이상 갈 수 없으면 뒤로 돌아가 다른 경로를 탐색하는 방식이다.
 ```js
 class GraphDFS {
@@ -130,7 +130,7 @@ graphDFS.addEdge("A", "B");
 graphDFS.addEdge("B", "C");
 graphDFS.dfs("A");
 ```
-2. 너비 우선 탐색 (BFS)
+**2. 너비 우선 탐색 (BFS)**
 : 가까운 정점부터 차례대로 탐색하며, 큐를 사용하여 탐색한다.
 ```js
 class GraphBFS {
